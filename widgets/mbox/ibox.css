@@ -1,0 +1,45 @@
+.ibox {
+    position: absolute;
+    display: none;
+    border: none;
+    padding: 6px;
+    width: 90%;
+}
+.ibox-content {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.ibox-content-inner {
+    overflow-y: scroll;
+    padding: 10px;
+}
+.ibox-close {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-family: tahoma;
+    font-size: 24px;
+    height: 18px;
+    line-height: 14px;
+    position: absolute;
+    right: 16px;
+    text-decoration: none;
+    top: 22px;
+    z-index: 10;
+}
+.ibox-title {
+    height: 45px;
+    font-size: 16px;
+    font-family: \5FAE\8F6F\96C5\9ED1,\9ED1\4F53,\5B8B\4F53;
+    font-weight: bold;
+    line-height: 46px;
+    border-bottom: 1px solid #E1E1E1;
+    text-indent: 20px;
+    background-color: #303443;
+    color: #fff;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}

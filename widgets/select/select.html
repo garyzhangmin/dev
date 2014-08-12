@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link charset="utf-8" rel="stylesheet" href="../lib/base.css" media="all">
+    <link charset="utf-8" rel="stylesheet" href="./select.css" media="all">
+</head>
+<body>
+
+<div class="com-select com-select-normal-border" id="J_sl">
+    <p>任意时段</p>
+    <ul>
+        <li data-value="1">任意时段</li>
+        <li data-value="2">指定时段</li>
+    </ul>
+    <div class="arrow">
+        <div></div>
+    </div>
+</div>
+<script src="../lib/jquery-2.1.0.js"></script>
+<script src="select.js"></script>
+<script>
+    new ComSelect({selector:$("#J_sl")});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>iPage</title>
+    <link charset="utf-8" rel="stylesheet" href="../lib/base.css" media="all"/>
+    <link charset="utf-8" rel="stylesheet" href="paging.css" media="all"/>
+</head>
+<body>
+<div id="demo1">
+
+</div>
+
+<script charset="utf-8" src="../lib/jquery-2.1.0.js"></script>
+<script charset="utf-8" src="../lib/juicer.js"></script>
+<script charset="utf-8" src="./paging.js"></script>
+
+
+<script id="template1" type="text/template">
+
+
+    <div class="mi-paging fn-right">
+        <span class="mi-paging-info fn-ml15">每页</span>
+        <div class="mi-paging-select mi-paging-select-normal-border" data-role="sizeSelect">
+            <p data-role="sizeValue">${pageSize}</p>
+            <ul data-role="sizeOptions">
+                <li data-role="sizeOpt">10</li>
+                <li data-role="sizeOpt" class="bg-gray">20</li>
+                <li data-role="sizeOpt">50</li>
+            </ul>
+            <div class="arrow" data-role="sizeSelect">
+                <div></div>
+            </div>
+        </div>
+
+        <span class="mi-paging-info mi-paging-which">
+            <input type="text" name="pageRedirect" value="${currentPage}" data-role="gotoNum" />
+        </span>
+        <a class="mi-paging-item mi-paging-goto" href="javascript:void(0)" data-role="goto"><span class="paging-text">跳转</span></a>
+        <span class="mi-paging-info fn-ml15"><span class="paging-text mi-paging-bold">${currentPage}/${totalPage}</span>页</span>
+
+        {@if isFirstPage }
+        <span href="#" class="mi-paging-item mi-paging-prev mi-paging-prev-disabled fn-mr10"><span class="paging-text">上一页</span><span class="mi-paging-icon"></span></span>
+        {@else}
+        <a href="#" class="mi-paging-item mi-paging-prev fn-mr10" data-role="prev"><span class="paging-text">上一页</span><span class="mi-paging-icon"></span></a>
+        {@/if}
+
+        {@if isLastPage }
+        <span href="#" class="mi-paging-item mi-paging-next mi-paging-next-disabled"><span class="paging-text">下一页</span><span class="mi-paging-icon"></span></span>
+        {@else}
+        <a href="#" class="mi-paging-item mi-paging-next" data-role="next"><span class="paging-text">下一页</span><span class="mi-paging-icon"></span></a>
+        {@/if}
+
+
+    </div>
+
+</script>
+
+<script type="text/javascript">
+
+        var page1 = new iPage({
+            target:"#demo1",
+            totalSize:158,
+            pageSize:10,
+            onChange:function() {
+                console.log("当前页 = "+this.currentPage);
+                console.log("数据总数 = "+this.totalSize);
+                console.log("每页显示条数 = "+this.pageSize);
+                console.log("当前是否是首页 = "+this.isFirstPage);
+                console.log("当前是否是尾页 = "+this.isLastPage);
+                console.log("当前页从第"+this.currentFrom+"条到第"+this.currentTo+"条");
+            }
+        });
+
+</script>
+</body>
+</html>

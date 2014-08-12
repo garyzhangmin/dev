@@ -1,0 +1,17 @@
+{
+    "family": "alipay",
+    "version": "1.0.1",
+    "name":"regionPicker",
+    "spm": {
+        "output":["regionPickerCity.js","regionPicker.js"],
+        "alias": {
+            "$": "$"
+        },
+        "devAlias": {
+        },
+        "engines": {}
+    }
+}
+
+
+

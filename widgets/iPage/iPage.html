@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>iPage</title>
+    <style type="text/css">
+        .title {
+            font-weight: bold;
+            font-size: 12px;
+            padding: 5px 10px 5px;
+            margin: 30px 0 5px;
+            background-color: #858575;
+            color: #ffffff;
+        }
+
+        .section {
+            margin:20px 0 0;
+        }
+    </style>
+    <link charset="utf-8" rel="stylesheet" href="iPage.css" media="all"/>
+</head>
+<body>
+<div class="layout">
+
+    <div class="content">
+        <div class="title">按钮样式</div>
+        <div class="section fn-clear" id="demo1"></div>
+        <div class="section fn-clear" id="demo2"></div>
+        <div class="section fn-clear" id="demo3"></div>
+        <div class="section fn-clear" id="demo4"></div>
+        <div class="title">居右对齐</div>
+        <div class="section fn-clear" id="demo5"></div>
+        <div class="section fn-clear" id="demo6"></div>
+        <div class="section fn-clear" id="demo7"></div>
+        <div class="title">文字样式</div>
+        <div class="section fn-clear" id="demo8"></div>
+        <div class="title">自定义样式</div>
+        <div class="section fn-clear" id="demo9"></div>
+    </div>
+
+</div>
+</body>
+<script charset="utf-8" src="../lib/jquery-2.1.0.js"></script>
+<script charset="utf-8" src="../lib/juicer.js"></script>
+<script charset="utf-8" src="./iPage.js"></script>
+
+
+<script id="template1" type="text/template">
+    <div class="mi-paging fn-left">
+
+        <a href="javascript:void(0)" class="mi-paging-prev" data-role="prev">上一页</a>
+
+        {@each pageNumbers as it,index}
+
+        {@if it == currentPage }
+        <a href="javascript:void(0)" class="mi-paging-item mi-paging-current" data-role="current"><span>${it}</span></a>
+        {@else}
+        <a href="javascript:void(0)" class="mi-paging-item" data-role="pageNum"><span>${it}</span></a>
+        {@/if}
+
+        {@/each}
+
+        <a href="javascript:void(0)" class="mi-paging-next" data-role="next">下一页</a>
+
+        <span class="mi-paging-info fn-ml0"><span class="mi-paging-bold">${currentPage}/${totalPage}</span>页</span>
+
+    </div>
+</script>
+
+
+<script id="template2" type="text/template">
+    <div class="mi-paging fn-left">
+
+        {@if isFirstPage }
+        <span class="mi-paging-prev">上一页</span>
+        {@else}
+        <a href="javascript:void(0)" class="mi-paging-prev" data-role="prev">上一页</a>
+        {@/if}
+
+        {@each pageNumbers as it,index}
+
+        {@if it == currentPage }
+        <a href="javascript:void(0)" class="mi-paging-item mi-paging-current" data-role="current"><span>${it}</span></a>
+        {@else}
+        <a href="javascript:void(0)" class="mi-paging-item" data-role="pageNum"><span>${it}</span></a>
+        {@/if}
+
+        {@/each}
+
+        {@if isLastPage }
+        <span class="mi-paging-next">下一页</span>
+        {@else}
+        <a href="javascript:void(0)" class="mi-paging-next" data-role="next">下一页</a>
+        {@/if}
+
+        <span class="mi-paging-info fn-ml0"><span class="mi-paging-bold">${currentPage}/${totalPage}</span>页</span>
+    </div>
+</script>
+
+
+<script id="template3" type="text/template">
+    <div class="mi-paging fn-left">
+
+        {@if isFirstPage }
+        <span class="mi-paging-first" data-role="first">首页</span>
+        <span class="mi-paging-prev">上一页</span>
+        {@else}
+        <a href="javascript:void(0)" class="mi-paging-first" data-role="first">首页</a>
+        <a href="javascript:void(0)" class="mi-paging-prev" data-role="prev">上一页</a>
+        {@/if}
+
+        {@each pageNumbers as it,index}
+
+        {@if it == currentPage }
+        <a href="javascript:void(0)" class="mi-paging-item mi-paging-current" data-role="current"><span>${it}</span></a>
+        {@else}
+        <a href="javascript:void(0)" class="mi-paging-item" data-role="pageNum"><span>${it}</span></a>
+        {@/if}
+
+        {@/each}
+
+        {@if isLastPage }
+        <span class="mi-paging-next">下一页</span>
+        <span class="mi-paging-last">尾页</span>
+        {@else}
+        <a href="javascript:void(0)" class="mi-paging-next" data-role="next">下一页</a>
+        <a href="javascript:void(0)" class="mi-paging-last" data-role="last">尾页</a>
+        {@/if}
+
+        <span class="mi-paging-info fn-ml0"><span class="mi-paging-bold">${currentPage}/${totalPage}</span>页</span>
+    </div>
+</script>
+
+<script id="template4" type="text/template">
+    <div class="mi-paging fn-left">
+
+
+        {@if isFirstPage }
+        <span class="mi-paging-first" data-role="first">首页</span>
+        <span class="mi-paging-prev">上一页</span>
+        {@else}
+        <a href="javascript:void(0)" class="mi-paging-first" data-role="first">首页</a>
+        <a href="javascript:void(0)" class="mi-paging-prev" data-role="prev">上一页</a>
+        {@/if}
+
+        {@each pageNumbers as it,index}
+
+        {@if it == currentPage }
+        <a href="javascript:void(0)" class="mi-paging-item mi-paging-current" data-role="current"><span>${it}</span></a>
+        {@else}
+        <a href="javascript:void(0)" class="mi-paging-item" data-role="pageNum"><span>${it}</span></a>
+        {@/if}
+
+        {@/each}
+
+        {@if pageNumbers[pageNumbers.length-1] < totalPage-1 }
+        <span class="mi-paging-ellipsis">...</span>
+        <a href="javascript:void(0)" class="mi-paging-item" data-role="pageNum"><span>${totalPage}</span></a>
+        {@/if}
+        {@if pageNumbers[pageNumbers.length-1] == totalPage-1 }
+        <a href="javascript:void(0)" class="mi-paging-item" data-role="pageNum"><span>${totalPage}</span></a>
+        {@/if}
+
+
+        {@if isLastPage }
+        <span class="mi-paging-next">下一页</span>
+        {@else}
+        <a href="javascript:void(0)" class="mi-paging-next" data-role="next">下一页</a>
+        {@/if}
+
+        <span class="mi-paging-info fn-ml0"><span class="mi-paging-bold">${currentPage}/${totalPage}</span>页</span>
+        <span class="mi-paging-info mi-paging-which"><input type="text" data-role="gotoNum" value="${currentPage}"></span>
+        <a class="mi-paging-info mi-paging-goto" href="javascript:void(0)" data-role="goto"><span>跳转</span></a>
+    </div>
+</script>
+
+<script id="template5" type="text/template">
+    <div class="mi-paging fn-right">
+        {@if !isFirstPage }
+        <a href="javascript:void(0)" class="mi-paging-prev" data-role="prev">上一页</a>
+        {@/if}
+
+        <span class="mi-paging-info">第<span class="mi-paging-bold">${currentPage}/${totalPage}</span>页</span>
+
+        {@if !isLastPage }
+        <a href="javascript:void(0)" class="mi-paging-next" data-role="next">下一页</a>
+        {@/if}
+    </div>
+</script>
+
+<script id="template6" type="text/template">
+    <div class="mi-paging fn-right">
+        {@if isFirstPage }
+        <span class="mi-paging-prev">上一页</span>
+        {@else}
+        <a href="javascript:void(0)" class="mi-paging-prev" data-role="prev">上一页</a>
+        {@/if}
+
+        <span class="mi-paging-info">第<span class="mi-paging-bold">${currentPage}/${totalPage}</span>页</span>
+
+        {@if isLastPage }
+        <span class="mi-paging-next">下一页</span>
+        {@else}
+        <a href="javascript:void(0)" class="mi-paging-next" data-role="next">下一页</a>
+        {@/if}
+    </div>
+</script>
+
+<script id="template7" type="text/template">
+    <div class="mi-paging fn-right">
+        {@if isFirstPage }
+        <span class="mi-paging-first" data-role="first">首页</span>
+        <span class="mi-paging-prev">上一页</span>
+        {@else}
+        <a href="javascript:void(0)" class="mi-paging-first" data-role="first">首页</a>
+        <a href="javascript:void(0)" class="mi-paging-prev" data-role="prev">上一页</a>
+        {@/if}
+
+        <span class="mi-paging-info">第<span class="mi-paging-bold">${currentPage}/${totalPage}</span>页</span>
+
+        {@if isLastPage }
+        <span class="mi-paging-next">下一页</span>
+        <span class="mi-paging-last">尾页</span>
+        {@else}
+        <a href="javascript:void(0)" class="mi-paging-next" data-role="next">下一页</a>
+        <a href="javascript:void(0)" class="mi-paging-last" data-role="last">尾页</a>
+        {@/if}
+    </div>
+</script>
+
+
+<script id="template8" type="text/template">
+    <div class="mi-paging mi-paging-text fn-left">
+        {@if !isFirstPage }
+        <a href="javascript:void(0)" class="mi-paging-first" data-role="first">首页</a>
+        <a href="javascript:void(0)" class="mi-paging-prev" data-role="prev">上一页</a>
+        {@/if}
+
+        <span class="mi-paging-info">${currentFrom} - ${currentTo}条，共${total}条</span>
+
+        {@if !isLastPage }
+        <a href="javascript:void(0)" class="mi-paging-next" data-role="next">下一页</a>
+        <a href="javascript:void(0)" class="mi-paging-last" data-role="last">尾页</a>
+        {@/if}
+    </div>
+</script>
+
+
+
+<style type="text/css">
+    /*为template9 自定义翻页组件样式*/
+    .pagination { padding: 20px 0 }
+    .pagination a:link,
+    .pagination a:visited {
+        color: #005EAC;
+        height: 14px;
+        line-height: 18px;
+        margin: 2px;
+        padding: 2px;
+    }
+    .pagination a:hover,
+    .pagination a:active,
+    .pagination a.active { text-decoration: underline }
+    .pagination a.current:link,
+    .pagination a.current:visited {
+        background: none repeat scroll 0 0 #6D84B4;
+        color: #FFFFFF;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .pagination a.current:hover,
+    .pagination a.current:active { text-decoration: none }
+    .pagination .page-dis {
+        margin-left: 20px;
+        color: #6D84B4;
+        font-weight: 700;
+    }
+    /*为template9 自定义翻页组件样式  end*/
+</style>
+<script id="template9" type="text/template">
+    <div class="pagination fn-left">
+        {@if !isFirstPage }
+        <a href="javascript:void(0)" data-role="first">首页</a>
+        <a href="javascript:void(0)" data-role="prev">上一页</a>
+        {@/if}
+
+        {@each pageNumbers as it,index}
+
+        {@if it === currentPage }
+        <a href="javascript:void(0)" class="current" data-role="current">${it}</a>
+        {@else}
+        <a href="javascript:void(0)" data-role="pageNum"><span>${it}</span></a>
+        {@/if}
+
+        {@/each}
+
+        {@if !isLastPage }
+        <a href="javascript:void(0)" data-role="next">下一页</a>
+        <a href="javascript:void(0)" data-role="last">尾页</a>
+        {@/if}
+        <span class="page-dis">${currentPage}/${totalPage}页</span>
+    </div>
+</script>
+<script type="text/javascript">
+
+        var page1 = new iPage({
+            target:"#demo1",
+            totalSize:50,
+            pageSize:4,
+            currentPage:3,
+            pageShow:5,
+            tpl:$('#template1').html(),
+            onChange:function() {
+                console.log("当前页 = "+this.currentPage);
+                console.log("数据总数 = "+this.totalSize);
+                console.log("每页显示条数 = "+this.pageSize);
+                console.log("当前是否是首页 = "+this.isFirstPage);
+                console.log("当前是否是尾页 = "+this.isLastPage);
+                console.log("当前页从第"+this.currentFrom+"条到第"+this.currentTo+"条");
+            }
+        });
+
+        var page2 = new iPage({
+            target:"#demo2",
+            totalSize:50,
+            pageSize:4,
+            currentPage:3,
+            pageShow:10,
+            tpl:$('#template2').html(),
+            onChange:function() {
+                console.log("当前页 = "+this.currentPage);
+                console.log("数据总数 = "+this.totalSize);
+                console.log("每页显示条数 = "+this.pageSize);
+                console.log("当前是否是首页 = "+this.isFirstPage);
+                console.log("当前是否是尾页 = "+this.isLastPage);
+                console.log("当前页从第"+this.currentFrom+"条到第"+this.currentTo+"条");
+            }
+        });
+
+        var page3 = new iPage({
+            target:"#demo3",
+            totalSize:50,
+            pageSize:2,
+            currentPage:1,
+            pageShow:10,
+            tpl:$('#template3').html(),
+            onChange:function() {
+                console.log("当前页 = "+this.currentPage);
+                console.log("数据总数 = "+this.totalSize);
+                console.log("每页显示条数 = "+this.pageSize);
+                console.log("当前是否是首页 = "+this.isFirstPage);
+                console.log("当前是否是尾页 = "+this.isLastPage);
+                console.log("当前页从第"+this.currentFrom+"条到第"+this.currentTo+"条");
+            }
+        });
+
+        var page4 = new iPage({
+            target:"#demo4",
+            totalSize:50,
+            pageSize:2,
+            currentPage:3,
+            pageShow:10,
+            tpl:$('#template4').html(),
+            onChange:function() {
+                console.log("当前页 = "+this.currentPage);
+                console.log("数据总数 = "+this.totalSize);
+                console.log("每页显示条数 = "+this.pageSize);
+                console.log("当前是否是首页 = "+this.isFirstPage);
+                console.log("当前是否是尾页 = "+this.isLastPage);
+                console.log("当前页从第"+this.currentFrom+"条到第"+this.currentTo+"条");
+            }
+        });
+
+        var page5 = new iPage({
+            target:"#demo5",
+            totalSize:50,
+            pageSize:6,
+            currentPage:1,
+            pageShow:10,
+            tpl:$('#template5').html(),
+            onChange:function() {
+                console.log("当前页 = "+this.currentPage);
+                console.log("数据总数 = "+this.totalSize);
+                console.log("每页显示条数 = "+this.pageSize);
+                console.log("当前是否是首页 = "+this.isFirstPage);
+                console.log("当前是否是尾页 = "+this.isLastPage);
+                console.log("当前页从第"+this.currentFrom+"条到第"+this.currentTo+"条");
+            }
+        });
+
+        var page6 = new iPage({
+            target:"#demo6",
+            totalSize:50,
+            pageSize:6,
+            currentPage:1,
+            pageShow:10,
+            tpl:$('#template6').html(),
+            onChange:function() {
+                console.log("当前页 = "+this.currentPage);
+                console.log("数据总数 = "+this.totalSize);
+                console.log("每页显示条数 = "+this.pageSize);
+                console.log("当前是否是首页 = "+this.isFirstPage);
+                console.log("当前是否是尾页 = "+this.isLastPage);
+                console.log("当前页从第"+this.currentFrom+"条到第"+this.currentTo+"条");
+            }
+        });
+
+        var page7 = new iPage({
+            target:"#demo7",
+            totalSize:50,
+            pageSize:6,
+            currentPage:1,
+            pageShow:10,
+            tpl:$('#template7').html(),
+            onChange:function() {
+                console.log("当前页 = "+this.currentPage);
+                console.log("数据总数 = "+this.totalSize);
+                console.log("每页显示条数 = "+this.pageSize);
+                console.log("当前是否是首页 = "+this.isFirstPage);
+                console.log("当前是否是尾页 = "+this.isLastPage);
+                console.log("当前页从第"+this.currentFrom+"条到第"+this.currentTo+"条");
+            }
+        });
+
+
+        var page8 = new iPage({
+            target:"#demo8",
+            totalSize:60,
+            pageSize:10,
+            currentPage : 2,
+            tpl:$('#template8').html(),
+            onChange:function() {
+                console.log("当前页 = "+this.currentPage);
+                console.log("数据总数 = "+this.totalSize);
+                console.log("每页显示条数 = "+this.pageSize);
+                console.log("当前是否是首页 = "+this.isFirstPage);
+                console.log("当前是否是尾页 = "+this.isLastPage);
+                console.log("当前页从第"+this.currentFrom+"条到第"+this.currentTo+"条");
+            }
+        });
+
+
+        //样式和模板自定义
+        var page9 = new iPage({
+            target:"#demo9",
+            totalSize:40,
+            pageSize:7,
+            currentPage : 2,
+            tpl:$('#template9').html(),
+            onChange:function() {
+                console.log("当前页 = "+this.currentPage);
+                console.log("数据总数 = "+this.totalSize);
+                console.log("每页显示条数 = "+this.pageSize);
+                console.log("当前是否是首页 = "+this.isFirstPage);
+                console.log("当前是否是尾页 = "+this.isLastPage);
+                console.log("当前页从第"+this.currentFrom+"条到第"+this.currentTo+"条");
+            }
+        });
+</script>
+</html>

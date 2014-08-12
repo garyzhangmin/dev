@@ -1,0 +1,87 @@
+h1, .ft32, .ft-h1 {
+    font-size: 32px;
+}
+
+h2, .ft28, .ft-h2 {
+    font-size: 28px;
+}
+
+h3, .ft24, .ft-h3 {
+    font-size: 24px;
+}
+
+h4, .ft18, .ft-h4 {
+    font-size: 18px;
+}
+
+h5, .ft14, .ft-h5 {
+    font-size: 14px;
+}
+
+h6, .ft12, .ft-h6 {
+    font-size: 12px;
+}
+
+.ft-active, .ft-link {
+    color: #428bca;
+}
+
+.ft-warn {
+    color: #d9524e;
+}
+
+.ft-error {
+    color: red;
+}
+
+.ft-info {
+    color: #f1ae4e;
+}
+
+.ft-success {
+    color: #5bb75b;
+}
+
+.ft-bold {
+    font-weight: bold;
+}
+
+.ft-bolder {
+    font-weight: bolder;
+}
+
+.ft-normal {
+    font-weight: 400;
+}
+
+.ft-light {
+    font-weight: 100;
+}
+
+.ft-italic {
+    font-style: italic;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.text-nodec {
+    text-decoration: none;
+}
+
+.text-underline {
+    text-decoration: underline;
+}

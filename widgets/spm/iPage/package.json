@@ -1,0 +1,32 @@
+{
+    "family": "alipay",
+    "name": "iPage",
+    "version": "1.0.0",
+    "description": "The best project ever.",
+    "homepage": "https://github.com/kasinooya/iPage",
+    "author": "min.zhangmzm",
+    "maintainers": [
+        "min.zhangmzm"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/kasinooya/iPage.git"
+    },
+    "bugs": {
+        "url": ""
+    },
+    "keywords": [],
+    "licenses": "MIT",
+    "spm": {
+        "output": [
+            "iPage.js",
+            "iPage.css"
+        ],
+        "alias": {
+            "$": "$"
+        },
+        "devAlias": {},
+
+        "engines": {}
+    }
+}

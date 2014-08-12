@@ -1,0 +1,93 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>iTable</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link charset="utf-8" rel="stylesheet" href="iTable.css" media="all"/>
+</head>
+<style>
+    .layout {
+        width: 990px;
+        margin: 0 auto;
+    }
+
+    .content {
+        padding: 0 0 100px;
+    }
+
+    .alicestyle-widget {
+        margin: 40px 0 40px 40px;
+    }
+
+    .alicestyle-widget-title {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+</style>
+<body>
+<div class="layout">
+    <div class="content">
+        <div class="alicestyle-widget">
+            <h3 class="alicestyle-widget-title">iTable</h3>
+            <div id="demo"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script charset="utf-8" src="../lib/jquery-2.1.0.js"></script>
+<script charset="utf-8" src="../lib/juicer.js"></script>
+<script charset="utf-8" src="../iPage/iPage.js"></script>
+<script charset="utf-8" src="iTable.js"></script>
+<script type="text/javascript">
+    //随即产生数据
+    var serverData = [],temp;
+    for (var i = 1; i <= 200000; i++) {
+        temp={};
+        temp.id = i;
+        temp.cells = [];
+        temp.cells.push(i);
+        temp.cells.push(new Date().getDate());
+        temp.cells.push("Client "+Math.ceil(Math.random()*10000));
+        temp.cells.push(Math.ceil(Math.random()*10000));
+        temp.cells.push(Math.ceil(Math.random()*100));
+        temp.cells.push(Math.ceil(Math.random()*10000));
+        temp.cells.push(getRandomStr(Math.ceil(Math.random()*20)));
+        serverData.push(temp);
+    }
+
+    function getRandomStr(length) {
+        var arr = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\\$()[]+^{}?*|.".split(''),
+                returnStr = "";
+        for (var i = 0; i < length; i++) {
+            returnStr += arr[Math.floor(Math.random() * arr.length)];
+        }
+        return returnStr;
+    }
+
+
+    //iTable 数据
+    var iTableData={
+        target:"demo",
+        columns:[  //name：列标题值、 width：列宽度，【缺省：100px】 、 align：该列数据的对齐方式，【缺省：居中】、  sortType：排序方式，【缺省：该列不排序】
+            {name:'id',width:55,sortType:"int"},
+            {name:'invdate',width:70},
+            {name:'name',width:200,sortType:"string"},
+            {name:'amount',width:80, align:"left",sortType:"float"},
+            {name:'tax',width:80, align:"center",sortType:"float"},
+            {name:'total',width:80,align:"right",sortType:"float"},
+            {name:'note',width:150}
+        ],
+        rows:serverData, //对象数组、 每个对象有id和cells属性  {id:1,cells:["aa","123","sss"]}
+        dataHeight:"400",
+        pageSize:50,//每页多少条数据          默认 30条
+        currentPage:8,//当前第几页            默认 第1页
+        pageShow:5 //分页标签显示的页码个数    默认 显示5个页码
+    };
+
+    var itable=new iTable(iTableData);
+
+</script>
+</html>
+

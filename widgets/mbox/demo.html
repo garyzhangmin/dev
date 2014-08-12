@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="GBK">
+    <title>先爽后付</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
+
+
+    <!-- CMS:无线/无线wap全站通用/mtracker开始:wap/wap_common/mtracker.vm -->
+    <script>
+        window._to = { start: new Date() };
+    </script>
+    <script>
+        !function(a){function b(a){return Object.prototype.toString.call(a)}function c(a){return"[object Object]"===b(a)}function d(a){return"[object Function]"===b(a)}function e(a,b){for(var c=0,d=a.length;d>c&&b.call(a,a[c],c)!==!1;c++);}function f(a){if(!p.test(a))return null;var b,c,d,e,f;if(-1!==a.indexOf("trident/")&&(b=/\btrident\/([0-9.]+)/.exec(a),b&&b.length>=2)){d=b[1];var g=b[1].split(".");g[0]=parseInt(g[0],10)+4,f=g.join(".")}b=p.exec(a),e=b[1];var h=b[1].split(".");return"undefined"==typeof f&&(f=e),h[0]=parseInt(h[0],10)-4,c=h.join("."),"undefined"==typeof d&&(d=c),{browserVersion:f,browserMode:e,engineVersion:d,engineMode:c,compatible:d!==c}}function g(b){if(o)try{var c=o.twGetRunPath.toLowerCase(),d=o.twGetSecurityID(a),e=o.twGetVersion(d);if(c&&-1===c.indexOf(b))return!1;if(e)return{version:e}}catch(f){}}function h(a,e,f){var g=d(e)?e.call(null,f):e;if(!g)return null;var h={name:a,version:k,codename:""},i=b(g);if(g===!0)return h;if("[object String]"===i){if(-1!==f.indexOf(g))return h}else{if(c(g))return g.hasOwnProperty("version")&&(h.version=g.version),h;if(g.exec){var j=g.exec(f);if(j)return h.version=j.length>=2&&j[1]?j[1].replace(/_/g,"."):k,h}}}function i(a,b,c,d){var f=u;e(b,function(b){var c=h(b[0],b[1],a);return c?(f=c,!1):void 0}),c.call(d,f.name,f.version)}var j={},k="-1",l=navigator.userAgent||"",m=navigator.appVersion||"",n=navigator.vendor||"",o=a.external,p=/\b(?:msie |ie |trident\/[0-9].*rv[ :])([0-9.]+)/,q=[["nokia",function(a){return-1!==a.indexOf("nokia ")?/\bnokia ([0-9]+)?/:-1!==a.indexOf("noain")?/\bnoain ([a-z0-9]+)/:/\bnokia([a-z0-9]+)?/}],["samsung",function(a){return-1!==a.indexOf("samsung")?/\bsamsung(?:\-gt)?[ \-]([a-z0-9\-]+)/:/\b(?:gt|sch)[ \-]([a-z0-9\-]+)/}],["wp",function(a){return-1!==a.indexOf("windows phone ")||-1!==a.indexOf("xblwp")||-1!==a.indexOf("zunewp")||-1!==a.indexOf("windows ce")}],["pc","windows"],["ipad","ipad"],["ipod","ipod"],["iphone",/\biphone\b|\biph(\d)/],["mac","macintosh"],["mi",/\bmi[ \-]?([a-z0-9 ]+(?= build))/],["aliyun",/\baliyunos\b(?:[\-](\d+))?/],["meizu",/\b(?:meizu\/|m)([0-9]+)\b/],["nexus",/\bnexus ([0-9s.]+)/],["huawei",function(a){return-1!==a.indexOf("huawei-huawei")?/\bhuawei\-huawei\-([a-z0-9\-]+)/:/\bhuawei[ _\-]?([a-z0-9]+)/}],["lenovo",function(a){return-1!==a.indexOf("lenovo-lenovo")?/\blenovo\-lenovo[ \-]([a-z0-9]+)/:/\blenovo[ \-]?([a-z0-9]+)/}],["zte",function(a){return/\bzte\-[tu]/.test(a)?/\bzte-[tu][ _\-]?([a-su-z0-9\+]+)/:/\bzte[ _\-]?([a-su-z0-9\+]+)/}],["vivo",/\bvivo ([a-z0-9]+)/],["htc",function(a){return/\bhtc[a-z0-9 _\-]+(?= build\b)/.test(a)?/\bhtc[ _\-]?([a-z0-9 ]+(?= build))/:/\bhtc[ _\-]?([a-z0-9 ]+)/}],["oppo",/\boppo[_]([a-z0-9]+)/],["konka",/\bkonka[_\-]([a-z0-9]+)/],["sonyericsson",/\bmt([a-z0-9]+)/],["coolpad",/\bcoolpad[_ ]?([a-z0-9]+)/],["lg",/\blg[\-]([a-z0-9]+)/],["android","android"],["blackberry","blackberry"]],r=[["wp",function(a){return-1!==a.indexOf("windows phone ")?/\bwindows phone (?:os )?([0-9.]+)/:-1!==a.indexOf("xblwp")?/\bxblwp([0-9.]+)/:-1!==a.indexOf("zunewp")?/\bzunewp([0-9.]+)/:"windows phone"}],["windows",/\bwindows nt ([0-9.]+)/],["macosx",/\bmac os x ([0-9._]+)/],["ios",function(a){return/\bcpu(?: iphone)? os /.test(a)?/\bcpu(?: iphone)? os ([0-9._]+)/:-1!==a.indexOf("iph os ")?/\biph os ([0-9_]+)/:/\bios\b/}],["yunos",/\baliyunos ([0-9.]+)/],["android",/\bandroid[\/\- ]?([0-9.x]+)?/],["chromeos",/\bcros i686 ([0-9.]+)/],["linux","linux"],["windowsce",/\bwindows ce(?: ([0-9.]+))?/],["symbian",/\bsymbian(?:os)?\/([0-9.]+)/],["meego",/\bmeego\b/],["blackberry","blackberry"]],s=[["trident",p],["webkit",/\bapplewebkit[\/]?([0-9.+]+)/],["gecko",/\bgecko\/(\d+)/],["presto",/\bpresto\/([0-9.]+)/],["androidwebkit",/\bandroidwebkit\/([0-9.]+)/],["coolpadwebkit",/\bcoolpadwebkit\/([0-9.]+)/]],t=[["sg",/ se ([0-9.x]+)/],["tw",function(){var a=g("theworld");return"undefined"!=typeof a?a:"theworld"}],["360",function(a){var b=g("360se");return"undefined"!=typeof b?b:-1!==a.indexOf("360 aphone browser")?/\b360 aphone browser \(([^\)]+)\)/:/\b360(?:se|ee|chrome|browser)\b/}],["mx",function(){try{if(o&&(o.mxVersion||o.max_version))return{version:o.mxVersion||o.max_version}}catch(a){}return/\bmaxthon(?:[ \/]([0-9.]+))?/}],["qq",/\bm?qqbrowser\/([0-9.]+)/],["green","greenbrowser"],["tt",/\btencenttraveler ([0-9.]+)/],["lb",function(a){if(-1===a.indexOf("lbbrowser"))return!1;var b;try{o&&o.LiebaoGetVersion&&(b=o.LiebaoGetVersion())}catch(c){}return{version:b||k}}],["tao",/\btaobrowser\/([0-9.]+)/],["fs",/\bcoolnovo\/([0-9.]+)/],["sy","saayaa"],["baidu",/\bbidubrowser[ \/]([0-9.x]+)/],["ie",p],["mi",/\bmiuibrowser\/([0-9.]+)/],["opera",function(a){var b=/\bopera.+version\/([0-9.ab]+)/,c=/\bopr\/([0-9.]+)/;return b.test(a)?b:c}],["chrome",/ (?:chrome|crios|crmo)\/([0-9.]+)/],["uc",function(a){return a.indexOf("ucbrowser/")>=0?/\bucbrowser\/([0-9.]+)/:/\buc\/[0-9]/.test(a)?/\buc\/([0-9.]+)/:a.indexOf("ucweb")>=0?/\bucweb[\/]?([0-9.]+)?/:/\b(?:ucbrowser|uc)\b/}],["android",function(a){return-1!==a.indexOf("android")?/\bversion\/([0-9.]+(?: beta)?)/:void 0}],["safari",/\bversion\/([0-9.]+(?: beta)?)(?: mobile(?:\/[a-z0-9]+)?)? safari\//],["webview",/\bcpu(?: iphone)? os (?:[0-9._]+).+\bapplewebkit\b/],["firefox",/\bfirefox\/([0-9.ab]+)/],["nokia",/\bnokiabrowser\/([0-9.]+)/]],u={name:"na",version:k},v=function(a){a=(a||"").toLowerCase();var b={};i(a,q,function(a,c){var d=parseFloat(c);b.device={name:a,version:d,fullVersion:c},b.device[a]=d},b),i(a,r,function(a,c){var d=parseFloat(c);b.os={name:a,version:d,fullVersion:c},b.os[a]=d},b);var c=f(a);return i(a,s,function(a,d){var e=d;c&&(d=c.engineVersion||c.engineMode,e=c.engineMode);var f=parseFloat(d);b.engine={name:a,version:f,fullVersion:d,mode:parseFloat(e),fullMode:e,compatible:c?c.compatible:!1},b.engine[a]=f},b),i(a,t,function(a,d){var e=d;c&&("ie"===a&&(d=c.browserVersion),e=c.browserMode);var f=parseFloat(d);b.browser={name:a,version:f,fullVersion:d,mode:parseFloat(e),fullMode:e,compatible:c?c.compatible:!1},b.browser[a]=f},b),b};j=v(l+" "+m+" "+n),j.parse=v,a.Detector=j,"function"==typeof define&&define("arale/detector/1.2.2/detector",[],function(a,b,c){c.exports=j})}(window);
+    </script>
+    <script>
+        !function(a){function b(){return/\bcna=/.test(document.cookie)}function c(a,b,c){b=b||"=";var d=[];for(var e in a)e&&a.hasOwnProperty(e)&&d.push(encodeURIComponent(e)+b+encodeURIComponent(a[e]));return d.join(c||"&")}function d(){var b=a.location.search,c={};return b.replace(/([^?=&]+)(=([^&]*))?/g,function(a,b,d,e){c[b]=e}),c}function e(a){return"[object Function]"===Object.prototype.toString.call(a)}function f(a){return"function"==typeof Array.isArray?Array.isArray(a):"[object Array]"===Object.prototype.toString.call(a)}function g(a){var b=Array.prototype.slice.apply(arguments);if("boolean"!=typeof b[0]&&b.unshift(a=!1),b.length<2)return null;for(var c,d=2,h=b[1],i=d,j=b.length;j>i;i++)if(c=b[i],c&&"object"==typeof c)for(var k in c){var l=c[k];if(l!==h&&c.hasOwnProperty(k))if(f(l))h[k]=Array.prototype.concat.call(l);else if(a&&l instanceof Object&&!e(l)&&!l.nodeType){var m=h[k]||{};h[k]=g(!0,m,c[k])}else void 0!==l&&(h[k]=l)}return h}function h(a){if("http:"===o.protocol||"https:"===o.protocol){var b=new Image(1,1);b.onload=function(){b.onload=null},b.src=a}else try{var c=new XMLHttpRequest;c.open("GET",a,!0),c.onreadystatechange=function(){},c.send()}catch(d){}}function i(a){k.dispatchEvent(n,a,function(){k.click("titlebar-"+a)})}var j=a.Detector;"function"==typeof require&&(j=require("arale/detector/1.2.2/detector"));var k,l,m=a,n=m.document,o=location,p=m.performance,q="https:"!==o.protocol&&"http:"!==o.protocol?"https:":o.protocol,r=q+"//kcart.alipay.com/web/bi.do",s=q+"//kcart.alipay.com/web/1.do",t=q+"//log.mmstat.com/5.gif",u=2e4,v=8,w="clk";p&&p.timing?l=p.timing.navigationStart:m._to&&_to.start&&(l=_to.start.getTime()),m.Tracker=k=function(){},k.prototype={watch:function(){k.click("tracker-watch")}},k.extend=function(a){for(var b=1,c=arguments.length;c>b;b++)for(var d in arguments[b])arguments[b].hasOwnProperty(d)&&(a[d]=arguments[b][d]);return a},k.version="1.0",k.enabled=!0,k.debug=!1,k.seedName="seed",k.minInterval=1e3;for(var x,y,z=n.getElementsByTagName("meta"),A=0,B=z.length;B>A;A++)if(y=z[A].getAttribute("name"),y&&"abtest"==y.toLowerCase()){x=z[A].getAttribute("content");break}if(k.dispatchEvent=function(a,b,c){a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent?a.attachEvent("on"+b,function(b){c.call(a,b)}):a["on"+b]=function(b){c.call(a,b)}},k.getTarget=function(a){a=a.touches[0];var b=a.target||a.srcElement;try{if(b&&3===b.nodeType)return b.parentNode}catch(c){}return b},k.send=function(d,e,f){if("string"!=typeof d||!d)throw new Error("Invalid page");var i={ref:e||"-",pg:d||"",r:(new Date).getTime(),v:k.version};x&&(i.ABTest=x,i.pg+=(i.pg.indexOf("?")>=0?"&":"?")+"ABTest="+x),f&&g(i,f),i=c(i),k.debug?a.console&&console.log("Tracker debug: %s.",i):(h(r+"?"+i),"http:"!==o.protocol&&"https:"!==o.protocol||b()||(i=c({url:s+"?"+i}),h(t+"?"+i)))},n&&m.location){var C=location.href,D=n.referrer,E=Math.random(),F={screen:"-x-",color:"-",BIProfile:"page"};if(m.screen&&(F.screen=screen.width+"x"+screen.height,F.sc=screen.colorDepth+"-bit"),F.utmhn=location.hostname,F.rnd=E,m.analytic_var&&(F.ana=analytic_var),j){var G,H,I,J,K=navigator.userAgent,L="";G=(j.os.name||"na")+"/"+(j.os.version||"-1"),H=(j.browser.name||"na")+"/"+(j.browser.version||"-1"),I=(j.engine.name||"na")+"/"+(j.engine.version||"-1"),J=(j.device.name||"na")+"/"+(j.device.version||"-1"),L=G+"|"+I+"|"+H+"|"+J;var M,N="-1";"anclient"==K&&(M=d().ttid,M&&(N=M.split("_")[2]),L="android/-1|webkit/-1|tbwebview/"+N+"|android/-1"),L.indexOf("na")>-1&&!parseInt(Math.random()*v,10)&&(L+="|"+K),j.currentUA=L,F._clnt=L}if(k.send(C,D,F),D=C,F={},!parseInt(Math.random()*v,10)){F.BIProfile="load";var O=0,P=0,Q=0,R=100,S=function(){S.invoked||(S.invoked=!0,O=(m._to&&_to.ready?_to.ready.getTime():(new Date).getTime())-l,O>u&&(T.invoked=!0,F.tm="-x-",k.send(C,"",F)))},T=function(){O>u||T.invoked||(T.invoked=!0,P=(m._to&&_to.end?_to.end.getTime():(new Date).getTime())-l,p&&p.timing&&(O=p.timing.domContentLoadedEventStart-p.timing.navigationStart,P=p.timing.loadEventStart-p.timing.navigationStart,Q=p.timing.responseEnd-p.timing.responseStart),U())},U=function(){return O?(O>P&&(O=P-R),10>O||(F.tm=""+O+"x"+P+"x"+Q,F.rnd=E,k.send(C,"",F)),void 0):(setTimeout(U,50),void 0)};l&&(m._to&&_to.ready?S():m.YAHOO&&YAHOO.util&&YAHOO.util.Event?YAHOO.util.Event.onDOMReady(S):m.jQuery?jQuery(S):m.Y&&Y.on?Y.on("domready",S):S(),m._to&&_to.end?T():(m.setTimeout(T,8*u),k.dispatchEvent(m,"load",T),k.dispatchEvent(m,"unload",T)))}}i("back"),i("title"),i("rightitem"),i("slaverightitem"),n&&k.dispatchEvent(n,"touchstart",function(a){var b=k.getTarget(a);if(b&&b.nodeType){for(;b&&"HTML"!=b.nodeName&&"function"==typeof b.getAttribute&&!b.getAttribute(k.seedName);)b=b.parentNode;if(b&&1===b.nodeType&&"HTML"!=b.nodeName){var c,d,e;"A"==b.nodeName&&(d=b.getAttribute("href")||"",e=d.match(/[?&]_scType=([^&]+)/),e&&(c={_scType:e[1]})),k.click(b.getAttribute(k.seedName),c)}}}),k.click=function(){var a={},b=location.href.split("?").shift(),d=b.indexOf(";jsessionid=");return d>=0&&(b=b.substr(0,d)),a[w]=location.href,function(d,e){if(d){var f=d.split(":",2);f.length>=2||f.unshift(w);var h=f[0];if(d=f[1]){var i={seed:d};e&&g(i,e),i=c(i);var j,l=b+"?"+i;h&&(j={BIProfile:h}),k.send(l,a[h]||"",j),a[h]=l}}}}(),k.log=function(a,b){k.click((b||"syslog")+":"+a)},k.error=function(a){k.click("syserr:"+a)},k.calc=function(a,b){k.click("calc:"+a,{value:b})},"function"==typeof define&&define("alipay/mtracker/1.0.3/mtracker",[],function(a,b,c){c.export=k})}(window);
+    </script>
+    <!-- CMS:无线/无线wap全站通用/mtracker结束:wap/wap_common/mtracker.vm -->
+
+
+    <!-- CMS:无线/无线wap全站通用/异步seajs引入开始:/home/admin/sharedata/ecmng_zpublish/tmp/ali01127529/req20131204227403.zip -->
+    <script>
+        (function(e,t,n,r,i,s,o){function u(e){return function(){return o.push(e,arguments),s}}if(e[t])return;e[t]=s={args:o=[],config:u(1),use:u(2),on:u(3)},e.define=u(0),window.addEventListener("load",function(){r=n.createElement("script"),r.id=t+"node",r.async=!0,r.src="http://assets.alipay.net/??handy/base/1.1.0/seajs-intro.js,seajs/seajs/2.1.1/sea.js,seajs/seajs-combo/1.0.0/seajs-combo.js,seajs/seajs-localcache/1.0.3/seajs-localcache.js,handy/base/1.1.0/seajs-outro.js",i=n.getElementsByTagName("head")[0],i.appendChild(r)})})(window,"seajs",document)
+        seajs.config({
+            alias: {
+                '$': 'handy/jquto/1.0.2/jquto',
+                '$-debug': 'handy/jquto/1.0.2/jquto-debug'
+            }
+        });
+        window.localcache = false;
+    </script>
+    <!-- CMS:无线/无线wap全站通用/异步seajs引入结束:wap/wap_common/seajs_async.vm -->
+
+
+
+    <link charset="utf-8" rel="stylesheet" href="./ibox.css" media="all" />
+    <style>
+
+        .fn-hide {
+            display:none
+        }
+
+        .ui-icon-loading {
+            width: 32px;
+            height: 32px;
+            margin:0 auto;
+            margin-top:100px;
+            z-index: 1000;
+            background: url(data:image/gif;base64,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) no-repeat 50% 50%;
+        }
+    </style>
+</head>
+<body ontouchstart="">
+
+<form action="/standard/creditpay/creditPaymentSignAndPay.htm" method="post" id="J_signform">
+    <div class="am-field">
+        <span class="am-checkbox am-checkbox-mini fn-left"><input type="checkbox" checked="checked" id="J_agreeProtocol" seed="syb-buy-first-checkbox"><span class="am-icon icon-check"></span></span>
+        <label class="am-ft-md">同意<div><a href="javascript:void(0);" id="J_postpayProtocolLink" seed="syb-buy-first-protocol-link">《先爽后付服务协议》</a><a href="javascript:void(0);" id="J_deductProtocolLink" seed="syb-buy-first-protocol-link2">《支付宝代扣服务协议》</a></div></label>
+    </div>
+</form>
+
+<div id="J_deductProtocol" class="fn-hide">
+    <p style="text-align:center;line-height:150%">
+        <strong><span style="font-family:宋体">支付宝代扣服务协议</span></strong>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">第一条</span> <span style="font-family:宋体">总则</span>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">本服务协议（以下简称“本协议”）是支付宝（中国）网络技术有限公司（以下简称“支付宝”）与支付宝用户（以下简称“用户”或“您”）就代扣服务的使用等相关事项所订立的有效合约。用户通过网络页面点击确认或以其他方式选择接受本协议，即表示用户与支付宝已达成协议并同意接受本协议的全部约定内容（<strong>尤其是加粗的文字部分</strong>）。</span> <span style="font-family:宋体">在接受本协议之前，请您仔细阅读本协议的全部内容。如果您不同意本协议的任意内容，<span style="background:yellow;background:yellow">或者无法准确理解支付宝对条款的解释</span>，请不要进行后续操作。</span>
+    </p>
+    <p style="line-height:150%">
+        <strong><span style="font-family:宋体">支付宝代扣服务：是指用户授权特定第三方向支付宝发送扣款指令，并授权支付宝根据该特定第三方的指令从用户的支付宝账户中扣取指定款项至该特定第三方指定的支付宝账户中（以下简称“本服务”）。本协议中的特定第三方是指用户通过书面形式、或在本签约页面以网站确认等方式授权的可以向支付宝发送扣款指令的主体。</span></strong>
+    </p>
+    <p style="line-height:150%">
+        &nbsp;
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">第二条</span> <span style="font-family:宋体">用户的权利义务</span>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">（一）您确认使用本服务的意思表示出自您的真实意愿；同时您对使用本服务过程中发出的指令的真实性及有效性承担全部责任，该指令视为您的真实意思表示且不可变更或撤销。您承诺，支付宝依照您的指令进行操作的一切风险均由您承担。</span>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">（二）您同意承诺不会利用本服务从事任何非法的或违反本协议目的或者侵犯其他第三方权益的行为，否则支付宝有权立即单方面终止提供本服务，并不承担任何责任；如果因您的行为给支付宝造成损失的，您应承担全部赔偿责任。</span>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">（三）<strong>您授权支付宝在您使用本服务期间或支付宝终止提供本服务后，有权保留您在使用本服务期间所形成的相关信息数据，同时该授权不可撤销。</strong></span>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">（四）<strong>您授权特定第三方向支付宝发送扣款指令，并授权支付宝根据该特定第三方的指令从您支付宝账户或其他支付宝实际提供的扣款渠道中扣取指定款项，至该特定第三方指定的支付宝账户。</strong></span>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">（五）<strong>您在使用本服务期间，可以使用支付宝提供的扣款渠道，包括支付宝账户余额、开通快捷支付功能的银行卡，或其他支付宝实际支持的扣款渠道（包括但不限于支付宝红包、集分宝、信任宝、</strong></span><strong><span style=";line-height:150%;font-family:宋体">您通过余额宝所持有的理财产品</span></strong><strong><span style="font-family:宋体">等）。</span></strong>
+    </p>
+    <p style="line-height:150%">
+        <strong><span style="font-family:宋体">（六）</span></strong><strong><span style=";line-height:150%;font-family:宋体">您理解并同意，当您发送代扣指令，且该代扣指令对应的扣款渠道为您通过余额宝所持有的理财产品时，即会触发余额宝所对应的理财产品份额支付的申请。您理解并同意，自触发余额宝所对应的理财产品份额支付申请之日起，您将不再承担\享有余额宝所对应的理财产品份额的损益。</span></strong>
+    </p>
+    <p style="line-height:150%">
+        <strong><span style=";line-height:150%;font-family: 宋体">（七）您</span></strong><strong><span style="font-family:宋体">理解并同意支付宝有权根据实际情况决定扣款渠道的顺序，具体以页面提示或支付宝网站的相关规则、解释为准。</span></strong>
+    </p>
+    <p style="line-height:150%">
+        <strong><span style="font-family:宋体">（八）您授权支付宝根据特定第三方的指令从您的支付宝账户中扣取指定款项至指定的支付宝账户中。</span></strong>
+    </p>
+    <p style="line-height:150%">
+        <strong><span style="font-family:宋体">您理解并同意，支付宝</span></strong><strong><span style=";line-height:150%;font-family:宋体">只是被授权指令的执行方，除非支付宝没有依照该特定第三方的指令进行操作，或操作指令错误，否则支付宝不对本服务产生的损失和责任负责。该等损失与责任应由您与该特定第三方协商解决。</span></strong>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">（九）您理解并同意，基于风险的防范与控制，支付宝会对您选择的不同扣款渠道的代扣额度作出不同的控制，日代扣额度及日代扣次数均以支付宝与您所在的网站向您具体公告的为准。</span> <span style="font-family:宋体">若超过该限额的话，将会扣款失败，无法完成支付。</span>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">（十）您在使用支付宝提供的本项服务时，必须同时遵守支付宝网站不时公布的《支付宝服务协议》及相关附属规则，否则因此导致责任，均由您自行承担。</span>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">（十一）您应遵守本服务的相关使用规则及要求，具体以支付宝不时在页面提示的使用规则及限制为准。</span>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">（十二）您对支付宝代扣服务如有疑问、建议或意见时，可拨打支付宝客服电话</span>95188<span style="font-family:宋体">或登录支付宝网站进行咨询和投诉。</span>
+    </p>
+    <p style="line-height:150%">
+        &nbsp;
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">第三条</span> <span style="font-family:宋体">支付宝的权利、义务</span>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">（一）支付宝对您的注册信息负有保密义务，但在必要时支付宝有权将相关信息提供给支付宝的监管机关及合作银行等。</span>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">（二）支付宝有义务在技术上确保代扣服务的安全、有效、正常运行，保证您的正常使用。</span>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">（三）<strong>支付宝可以在法律法规许可或您授权的范围内使用您在支付宝留存的资料或交易信息等。</strong></span>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">（四）除本协议另有规定外，支付宝在提前邮件通知您或在网站公告的情况下，可以单方面终止向您提供本服务，并不承担任何赔偿责任。支付宝在终止提供本服务后，若发现您之前存在违法或违反本协议目的的使用行为，给支付宝造成损失的，则支付宝仍可据此要求您承担相应赔偿责任并保留通过司法途径予以解决的权利。</span>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">（五）支付宝负责向您提供代扣业务咨询服务，并在支付宝网站公布功能介绍、使用规则等内容。</span>
+    </p>
+    <p style="line-height:150%">
+        &nbsp;
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">第四条</span> <span style="font-family:宋体">协议修改</span>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">（一）<strong>支付宝将有权随时修改本协议的有关条款，一旦相关内容发生变动，支付宝公司将会通过电子邮件或网站公告等方式向您提示修改内容。</strong></span><strong> </strong>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">（二）如果您不同意支付宝对本协议相关条款所做的修改或者支付宝不时公布的《支付宝服务协议》及相关附属规则，您应立即停止使用支付宝提供的本项服务。如果您继续使用支付宝提供的服务，则视为您接受并认可本协议相关条款的修改及支付宝不时公布的《支付宝服务协议》及相关附属规则。</span>
+    </p>
+    <p style="line-height:150%">
+        &nbsp;
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">第五条</span> <span style="font-family:宋体">争议的解决</span>
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">双方在履行本协议的过程中，如发生争议，应协商解决。协商不成的，任何一方均可向<strong>被告所在地有管辖权的人民法院</strong>提起诉讼。</span>
+    </p>
+    <p style="line-height:150%">
+        &nbsp;
+    </p>
+    <p style="line-height:150%">
+        <span style="font-family:宋体">第六条</span> <span style="font-family:宋体">协议的解释</span>
+    </p>
+    <p style="line-height: 150%;">
+        <span style="font-family:宋体">本协议的成立、生效、履行和解释，均适用中华人民共和国法律；法律无明文规定的，应适用支付宝公司制定的业务规则和通行的商业惯例。本服务协议未规定部分依照《支付宝服务协议》及相关附属规则予以履行；本协议与《支付宝服务协议》及相关附属规则相冲突的，以本协议为准。</span>
+    </p>
+</div>
+<div id="J_postpayProtocol" class="fn-hide">
+    <p style="text-align: center;">
+        <strong><span style="font-size:21px;font-family: 宋体;color:#333333">先爽后付服务合同</span></strong>
+    </p>
+    <p style="text-align:center">
+        <strong><span style="font-size:21px;color:#333333">&nbsp;</span></strong>
+    </p>
+    <p style="line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">特别提醒：</span></strong>
+    </p>
+    <p style="text-indent:30px;line-height:150%">
+        <strong><span style="text-decoration:underline;"><span style="font-family:宋体;color:#333333">本合同由使用先爽后付服务的用户（以下简称“用户”或“您”）与<a>$!merchant_name</a></span></span></strong><strong><span style="text-decoration:underline;"><span style="font-family:宋体;color:#333333">（以下简称“服务商”）就使用先爽后付服务相关事宜而共同缔结。在您确认本合同之前，请您仔细阅读本合同所有条款，部分粗体加下划线的条款含有限制或免除服务商义务的内容（以下简称“限制性条款”）。一旦您按本合同约定的方式确认本合同，即意味着您已充分理解本合同所有条款（包含限制性条款）的含义及相应的法律后果，同意与服务商以数据电文形式订立本合同并接受本合同约束。</span></span></strong>
+    </p>
+    <p style="text-indent:30px;line-height:150%">
+        <strong><span style="text-decoration:underline;"><span style="font-family:宋体;color:#333333">本合同签订地：杭州市西湖区</span></span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;text-indent:0;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">&nbsp;</span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">一、<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></strong><strong><span style="font-family:宋体;color:#333333">术语定义</span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="line-height: 150%;font-family: Arial">1.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="line-height: 150%;font-family: 宋体">先爽后付服务：指由</span><span style="font-family:宋体;color:#333333">服务商</span><span style="line-height: 150%;font-family: 宋体">联合第三方推出的，向您提供的全新消费体验服务，以下简称“本服务”。本合同生效暨您接受并使用本服务后，您在接受</span><span style="font-family:宋体;color:#333333">服务商</span><span style="line-height: 150%;font-family: 宋体">提供的服务时无需当即付款，而仅需在</span><span style="font-family:宋体;color:#333333">服务商</span><span style="line-height: 150%;font-family: 宋体">指定的账期内通过支付宝账户完成付清账单。</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="line-height: 150%;font-family: Arial">2.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="line-height: 150%;font-family: 宋体">支付宝账户：指您申请注册的，由支付宝（中国）网络技术有限公司（以下简称“支付宝”）为您提供支付、查询本服务账单的账户。</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="line-height: 150%;font-family: Arial">3.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="line-height: 150%;font-family: 宋体">总额度：指您在使用本服务的最大限额，具体以本服务页面展示为准。超过该额度后，您将无法继续使用本服务接受</span><span style="font-family:宋体;color:#333333">服务商</span><span style="line-height: 150%;font-family: 宋体">提供的服务。</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="line-height: 150%;font-family: Arial">4.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="line-height: 150%;font-family: 宋体">剩余额度：指总额度与您实际已使用额度之差，具体以本服务页面展示为准。</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="line-height: 150%;font-family: Arial">5.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="line-height: 150%;font-family: 宋体">付账日：指由</span><span style="font-family:宋体;color:#333333">服务商</span><span style="line-height: 150%;font-family: 宋体">指定账期的最后一天，您须在当日前完成付款。超过该日付款的，视为您违约。具体以本服务页面展示为准。</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="line-height: 150%;font-family: Arial">6.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="line-height: 150%;font-family: 宋体">账期：指您当次使用本服务之日起至付账日止的期间。</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="line-height: 150%;font-family: Arial">7.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="line-height: 150%;font-family: 宋体">账单总额：指您在一个账期或多个账期内使用本服务实际接受</span><span style="font-family:宋体;color:#333333">服务商</span><span style="line-height: 150%;font-family: 宋体">提供的服务所对应的未付款金额</span><span style="line-height: 150%;font-family: 宋体">。具体以本服务页面展示为准。</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="line-height: 150%;font-family: Arial">8.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="line-height: 150%;font-family: 宋体">本期账单金额：指一个账期内您实际接受</span><span style="font-family:宋体;color:#333333">服务商</span><span style="line-height: 150%;font-family: 宋体">提供的服务所对应的未付款金额。具体以本服务页面展示为准。</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="line-height: 150%;font-family: Arial">9.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="line-height: 150%;font-family: 宋体">已出账金额：指根据本合同约定须在当次付账日付款的金额。具体以本服务页面展示为准。</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="line-height: 150%;font-family: Arial">10.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp; </span></span><span style="line-height: 150%;font-family: 宋体">未出账金额：指根据本合同约定无须在当次付账日付款的金额。具体以本服务页面展示为准。</span>
+    </p>
+    <p style="line-height:150%">
+        <span style="line-height: 150%;font-family: Arial">&nbsp;</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">二、<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></strong><strong><span style="font-family:宋体;color:#333333">合同的成立和生效</span></strong>
+    </p>
+    <p style="text-indent:30px;line-height:150%">
+        <strong><span style="text-decoration:underline;"><span style="font-family:宋体;color:#333333">您在本服务页面点击<a>“记账购买”</a></span></span></strong><strong><span style="text-decoration:underline;"><span style="font-family:宋体;color:#333333">并页面提示“购买成功”时合同成立，本合同成立即生效。您同意，服务商及其合作方有权基于业务发展及风险控制需要单方面修改或终止本合同，但需提前通知。合同修改后您继续使用本服务的，则视为您同意修改后的合同内容。</span></span></strong>
+    </p>
+    <p style="text-indent:30px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">&nbsp;</span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">三、<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></strong><strong><span style="font-family:宋体;color:#333333">信息授权</span></strong>
+    </p>
+    <p style="text-indent:30px;line-height:150%">
+        <strong><span style="text-decoration:underline;"><span style="font-family:宋体;color:#333333">您不可撤销地、免费地授权服务商从支付宝及其关联公司获取您向其提供的您的用户注册信息、支付宝账户信息、银行账户信息、交易信息、信用信息等，无论该等信息获取行为发生在过去、现在还是将来；服务商有权将上述信息提供给中国人民银行征信中心、其他征信机构、有权政府机关和监管机构、关联公司以及合作方，并基于本合同项下服务向上述机构或有关单位、部门查询、复制、使用您的信息和数据。</span></span></strong>
+    </p>
+    <p style="text-indent:30px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">&nbsp;</span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">四、<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></strong><strong><span style="font-family:宋体;color:#333333">信息展示及付账单</span></strong>
+    </p>
+    <p style="text-indent:30px;line-height:150%">
+        <strong><span style="text-decoration:underline;"><span style="font-family:宋体;color:#333333">您在使用本服务过程中产生的相关信息，包括但不限于消费信息、账单信息、付账记录等，将会由服务商委托其合作方生成并在您的支付宝账户“公众服务-先爽后付”页面进行展示，您对此不持异议。</span></span></strong>
+    </p>
+    <p style="text-indent:30px;line-height:150%">
+        <strong><span style="text-decoration:underline;"><span style="font-family:宋体;color:#333333">您可以在“公众服务-先爽后付”页面对消费信息、账单信息及付账记录进行查询。在付账日，您可以且仅能通过该页面使用您的支付宝账户付清账单。除此之外，服务商不接受其他付账单方式。</span></span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;text-indent:0;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">&nbsp;</span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">五、<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></strong><strong><span style="font-family:宋体;color:#333333">使用本服务的相关规则</span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:24px;line-height:150%">
+        <span style="font-family:宋体;color:#333333">1.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp; </span></span><span style="font-family:宋体;color:#333333">您应保证您具备完全民事行为能力。</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:24px;line-height:150%">
+        <span style="font-family:宋体;color:#333333">2.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp; </span></span><span style="font-family:宋体;color:#333333">您应妥善保管您的支付宝账户及其他相关账户，并承担账户信息泄露造成的任何损失。</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:24px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">3.<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp; </span></span></strong><strong><span style="text-decoration:underline;"><span style="font-family:宋体;color:#333333">您的先爽后付总额度将由服务商及其合作方根据您的实际使用信息及资信状况确定，服务商及其合作方有权根据您的实际使用信息、资信状况、风险控制及本服务运营情况调整、终止您的总额度；</span></span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:24px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">4.<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp; </span></span></strong><strong><span style="text-decoration:underline;"><span style="font-family:宋体;color:#333333">您理解，在先爽后付总额度范围内，您的账单总额达到一定数额后须先付清账单才能继续使用本服务，前述数额由服务商及其合作方单方面确定并根据需要进行调整。</span></span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:24px;line-height:150%">
+        <span style="font-family:宋体;color:#333333">5.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp; </span></span><span style="font-family:宋体;color:#333333">使用本服务过程中，服务商、支付宝及其关联方可能会要求您提供相关信息，实际提供的信息以本服务页面展示为准。您应根据页面要求输入相关信息，否则，服务商、支付宝及其关联方有权拒绝为您提供本服务。</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:24px;line-height:150%">
+        <span style="font-family:宋体;color:#333333">6.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp; </span></span><span style="font-family:宋体;color:#333333">使用本服务过程中，您应在服务商指定的账期内通过支付宝账户完成付清账单。您未在付账日付清账单的，您应承担违约责任。</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:24px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">7.<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp; </span></span></strong><strong><span style="text-decoration:underline;"><span style="font-family:宋体;color:#333333">您应及时有效地更新您在本服务中的相关个人信息（包括但不限于姓名、身份证号码、手机号码等），否则，您应承担由此产生的所有损失。</span></span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:24px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">8.<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp; </span></span></strong><strong><span style="text-decoration:underline;"><span style="font-family:宋体;color:#333333">非因服务商未提供服务或提供的服务不符合法律法规、监管规定及双方约定等原因，您不得以其他任何理由拒绝支付因使用本服务而实际产生的账单。</span></span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:24px;text-indent:0;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">&nbsp;</span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">六、<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></strong><strong><span style="font-family:宋体;color:#333333">合同违约及违约处理</span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:56px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">(一)<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></strong><strong><span style="font-family:宋体;color:#333333">违约事件</span></strong>
+    </p>
+    <p style="margin-left:28px;line-height:150%">
+        <span style="font-family:宋体;color:#333333">您发生下列任一情况，均构成违约： </span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="font-family:宋体;color:#333333">1.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp; </span></span><span style="font-family:宋体;color:#333333">您未按本合同规定在付账日付清账单的； </span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="font-family:宋体;color:#333333">2.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp; </span></span><span style="font-family:宋体;color:#333333">您被宣告失踪、处于限制民事行为能力或丧失民事行为能力状态、被刑事监禁、或您发生重大疾病、重大事故等可能影响您付款能力的情况；</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="font-family:宋体;color:#333333">3.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp; </span></span><span style="font-family:宋体;color:#333333">您的资信状况出现其他重大不利变化；</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="font-family:宋体;color:#333333">4.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp; </span></span><span style="font-family:宋体;color:#333333">您违反本合同约定的义务的；</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="font-family:宋体;color:#333333">5.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp; </span></span><span style="font-family:宋体;color:#333333">您存在欺诈行为的。</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:56px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">(二)<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></strong><strong><span style="font-family:宋体;color:#333333">违约救济</span></strong>
+    </p>
+    <p style="text-indent:28px;line-height:150%">
+        <span style="font-family:宋体;color:#333333">如您出现本条第一款所述之任何违约情形，或违背您在本合同项下其他任何义务、陈述、保证或承诺的，服务商及其合作方有权采取下列一项或多项措施，包括但不限于： </span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="font-family:宋体;color:#333333">1.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp; </span></span><span style="font-family:宋体;color:#333333">要求您限期纠正违约行为；</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">2.<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp; </span></span></strong><strong><span style="text-decoration:underline;"><span style="font-family:宋体;color:#333333">单方面终止本合同，要求您提前付清本服务账单总额；</span></span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">3.<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp; </span></span></strong><strong><span style="text-decoration:underline;"><span style="font-family:宋体;color:#333333">要求支付宝与银行协助对您本人的任何一个或几个支付宝账户与银行账户权限进行限制，包括但不限于冻结您支付宝账户的部分或全部资金、停止向您提供所有支付宝账户与银行账户支付、提现、转账等服务；</span></span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">4.<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp; </span></span></strong><strong><span style="text-decoration:underline;"><span style="font-family:宋体;color:#333333">要求支付宝与银行协助从您所有的支付宝账户与银行账户或与您本人支付宝账户绑定的银行账户资金中扣收全部或部分应付款项；</span></span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="font-family:宋体;color:#333333">5.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp; </span></span><span style="font-family:宋体;color:#333333">以合法手段向您追偿（包括但不限于委托债务催讨公司、律师事务所等其他第三方机构代为追讨，申请相关部门进行调查、向法院提起诉讼等），由此引起的一切费用（包括但不限于公证费、诉讼费、财产保全费、执行费、仲裁费、律师代理费、差旅费、评估费、拍卖费、催收费用等）由您承担； </span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="font-family:宋体;color:#333333">6.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp; </span></span><span style="font-family:宋体;color:#333333">将您在本服务中产生的个人不良信息向中国人民银行个人信用信息基础数据库、依法设立的征信机构、资信评估机构或有关法律、监管机构许可的类似机构提供。</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <span style="font-family:宋体;color:#333333">7.<span style="font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp; </span></span><span style="font-family:宋体;color:#333333">根据法律法规或本合同约定有权采取的其他违约救济措施。</span>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;text-indent:0;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">&nbsp;</span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">七、<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></strong><strong><span style="font-family:宋体;color:#333333">第三方服务</span></strong>
+    </p>
+    <p style="text-indent:30px;line-height:150%">
+        <strong><span style="text-decoration:underline;"><span style="font-family:宋体;color:#333333">您同意并理解，服务商可能委托第三方提供本服务中的部分服务，包括但不限于信用评级、信息展示、付账单、账单催收及债权转让等。作为本服务的组成部分，上述服务的提供方不再另行与您签署合同，对此您不持异议。</span></span></strong>
+    </p>
+    <p style="text-indent:30px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">&nbsp;</span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">八、<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></strong><strong><span style="font-family:宋体;color:#333333">通知</span></strong>
+    </p>
+    <p style="text-indent:30px;line-height:150%">
+        <strong><span style="text-decoration:underline;"><span style="font-family:宋体;color:#333333">本合同履行过程中，服务商或其合作方向您发出的书面通知方式包括但不限于邮寄纸质通知、发送网站公告、公众账户通知、电子邮件、站内信、旺旺系统信息、手机短信和传真等方式。如以邮寄方式向您发出书面通知的，则在服务商或其合作方按照您在服务商或其合作方处留存的通讯地址交邮后的第三个自然日即视为送达。如以网站公告、公众账户通知、电子邮件、站内信、旺旺系统信息、手机短信和传真等电子方式发出书面通知的，则在通知发送成功即视为送达。</span></span></strong>
+    </p>
+    <p style="text-indent:30px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">&nbsp;</span></strong>
+    </p>
+    <p class="MsoListParagraph" style="margin-left:28px;line-height:150%">
+        <strong><span style="font-family:宋体;color:#333333">九、<span style="font-weight: normal;font-size: 9px;line-height: normal;font-family: &#39;Times New Roman&#39;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></strong><strong><span style="font-family:宋体;color:#333333">合同的适用法律及争议解决方式</span></strong>
+    </p>
+    <p style="text-indent: 28px; line-height: 150%;">
+        <span style="font-family:宋体;color:#333333">本合同适用中华人民共和国法律。本合同在履行过程中发生争议，可以协商解决，协商不成，向合同签订地人民法院起诉。在诉讼期间，本合同不涉及争议部分的条款仍须履行。</span>
+    </p>
+</div>
+<script src="../lib/jquery-2.1.0.js" charset="utf-8"></script>
+<script src="./ibox.js?t=1212121" charset="utf-8"></script>
+<script>
+//    seajs.use(['$','excashier/shuyubao/1.0.0/util'], function($,util) {
+        $(function() {
+
+            var postpayProtocolBox = new iBox({
+                contentHeight: 300,
+                title:"《先爽后付服务协议》",
+                contentHtml:$("#J_postpayProtocol").html()
+            });
+
+            var deductProtocol = new iBox({
+                contentHeight: 300,
+                title:"《支付宝代扣服务协议》",
+                contentHtml:$("#J_deductProtocol").html()
+            });
+
+            $("#J_postpayProtocolLink").on("click",function(e){
+                postpayProtocolBox.showBox();
+                e.preventDefault();
+            });
+            $("#J_deductProtocolLink").on("click",function(e){
+                deductProtocol.showBox();
+                e.preventDefault();
+            });
+        });
+
+
+//    });
+</script>
+
+<div class="am-loading">
+    <div class="am-loading-text" style="display:none;">
+        <i class="iconfont" title="关闭/错误">&#x3446;</i><span id="J_am_toast_error"></span>
+    </div>
+    <div class="am-loading-text" style="display:none;">
+        <i class="iconfont" title="选择/对勾">&#x3447;</i><span id="J_am_toast_success"></span>
+    </div>
+    <div class="am-loading-text" style="display:none;">
+        <span class="am-loading-icon"></span><span id="J_am_toast_loading"></span>
+    </div>
+</div>
+</body>
+</html>

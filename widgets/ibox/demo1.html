@@ -1,0 +1,797 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>iBox</title>
+    <link charset="utf-8" rel="stylesheet" href="http://assets.dev.alipay.net/ar/aralex.iBox-1.0-SNAPSHOT.css" media="all"/>
+    <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            font-size: 12px;
+            color: #404040;
+        }
+
+        dt{
+            font-size:14px;
+            font-weight:bold;
+            padding:10px;
+        }
+
+        dl{
+            font-size:13px;
+        }
+
+        ul {
+            margin: 5px 0 0 30px;
+            padding: 0;
+            list-style-type: circle;
+        }
+
+        ul li {
+            margin: 0;
+            padding: 0;
+        }
+
+        a,a:link,a:hover,a:active,a:visited {
+            color: #6699CC;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .clear {
+            clear: both;
+            height: 0px;
+            font-size: 1px;
+        }
+
+        .tb {
+            width: 100%;
+            padding: 0;
+            margin-top: 8px;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border: 1px solid #6699CC;
+            *border-collapse:collapse;
+        }
+
+        .tb thead th {
+            height: 38px;
+            margin: 0;
+            color: #000;
+            background-color: #E0EFFF;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .tb tr td {
+            padding: 7px 10px;
+            border-bottom: 1px solid #ddd;
+            line-height: 18px;
+            vertical-align: top;
+        }
+
+        #docTitle {
+            width: 80%;
+            margin: 20px auto;
+            padding: 22px 30px;
+            border: 2px solid #303030;
+            background-color: #6699CC;
+            color: white;
+            font-size: 24px;
+            font-weight: normal;
+        }
+
+        #docTitle a {
+            color: white;
+            font-weight: bold;
+        }
+
+        #master {
+            width: 84%;
+            margin: auto;
+        }
+
+        #master .body {
+            padding: 15px;
+            background-color: #fffdfd;
+        }
+
+        #master .body .content h2 {
+            margin: 35px 0 3px;
+            font-size: 21px;
+        }
+
+
+        /*=======================================
+        * Code css
+        * ======================================*/
+        code {
+            display: block;
+            margin: 5px;
+            padding: 2px 30px 2px 15px;
+            overflow: auto;
+            font-family: monospace;
+            line-height: 17px;
+            white-space: pre;
+            text-align: left;
+            border: 1px solid #6699CC;
+            border-width: 1px 1px 1px 15px;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            background-color: #FFFFFF;
+            color: #000;
+            font-size:14px;
+        }
+
+        code span {
+            color: #4CC744;
+            font-style: italic;
+        }
+
+        .demo-title{
+            color: #69F;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .run-btn {
+            font-size: 12px;
+            padding: 2px 8px;
+            background-color: #69C;
+            border: solid 1px #69C;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            color:#FFF;
+        }
+    </style>
+</head>
+<body>
+
+<div id="docTitle">
+    <a target="_blank" class="right" href="http://www.alipay.com">Alipay前端组件 </a>
+    <b>Widgets</b>  - iBox v1.0
+</div>
+
+<div id="master">
+<div class="clear">&nbsp;</div>
+
+<div class="body">
+
+<div class="content">
+
+<div class="docs" id="docs">
+<h1>文档</h1>
+<h2>概述</h2>
+<h4>iBox组件是基于arale.core-1.1.js的对话框组件。iBox提供了自定义按钮，自定义皮肤，Ajax，img，iframe等异步加载功能，提供多种接口，支持各种回调事件，兼容各种浏览器。</h4>
+<dl class="about">
+    <dt>主要功能</dt>
+    <dd>支持无侵入式加载方式，支持拖拽（depend on iDrag），支持Ajax（arale.http），支持自动关闭，遮罩层等功能</dd>
+    <dt>自定义样式</dt>
+    <dd>可以内置特殊样式 如 Alipay | FaceBook | 豆瓣 | 红色 | 紫色，还可以自定义其他样式</dd>
+    <dt>自定义加载内容</dt>
+    <dd>支持四种加载内容“Ajax”，“Img”，“iFrame”，“Dom”。</dd>
+    <dt>伸缩性和扩展性</dt>
+    <dd>提供更新和追加iBox的内容，Ajax或img reload方法，重定位，设置窗口大小，设置皮肤等接口</dd>
+    <dt>自定义按钮</dt>
+    <dd>能自定义Button对齐方式，文案和callback回调</dd>
+    <dt>自定义显示和隐藏方式</dt>
+    <dd>提供"fade","slide"的显示隐藏方式</dd>
+    <dt>跨浏览器兼容</dt>
+    <dd>兼容：IE6+、Firefox3+、Chrome、Safari、Opera等主流浏览器</dd>
+</dl>
+
+<h2>Demo</h2>
+<div>
+    <div class="demo-title">无侵入式加载iBox</div>
+    <code class="javascript">
+        var ibox=new araleX.Widget.iBox({
+        cleanMod:true,<span>//是否是无侵入模式，即在每次iBox 显示和隐藏时都会创建和删除iBox的Dom节点，默认为false</span>
+        title: "无侵入式加载iBox",
+        contentHtml: "Arale iBox Widgets Is Based On arale.core-1.1.js",
+        skin:"alipay"<span>//alipay为内置样式  也可以传入一个对象如{"bgColor":"#FCA347","color":"#FFFFFF"}</span>
+        contentWidth:360,
+        contentHeight:60,
+        hasOverlay:true,
+        overlayOpacity: 0.4,
+        overlayColor: 'green'
+        });
+
+        $("runButton").click(function(){ ibox.showBox(); });
+    </code>
+    <p class="buttons">
+        <button class="run-btn" id="demo1">运行&raquo;</button>
+    </p>
+</div>
+
+<div>
+    <div class="demo-title">按钮定制化</div>
+    <code class="javascript">
+        var ibox=new araleX.Widget.iBox({
+        title: "按钮定制化",
+        contentHtml: "Arale iBox Widgets Is Based On arale.core-1.1.js",
+        skin:"alipay",
+        closeVal:"关闭",
+        onClose:function(){
+        alert("Game Over!!!");
+        },
+        confirmVal:"换肤",
+        onConfirm:function(){
+        this.setSkin("douban").setTitle("豆瓣样式");
+        return false;
+        },
+        cancelVal:"还原",
+        onCancel:function(){
+        this.setSkin("alipay").setTitle("按钮定制化");
+        return false;
+        }
+        });
+
+        $("runButton").click(function(){ ibox.showBox(); });
+    </code>
+    <p class="buttons">
+        <button class="run-btn" id="demo2">运行&raquo;</button>
+    </p>
+</div>
+
+<div>
+    <div class="demo-title">自定义按钮</div>
+    <code class="javascript">
+        var dataArr=["步骤一","步骤二","步骤三","步骤四","步骤五","结束"];
+        var count=0;
+        var ibox=new araleX.Widget.iBox({
+        title: "自定义按钮",
+        contentHtml: dataArr[count],
+        skin:"facebook",
+        contentWidth:360,
+        contentHeight:60,
+        buttonsAlign:"right",
+        buttons:[
+        {
+        val:"上一步",
+        dim:false,
+        onClick:function(){
+        if(count!=0){
+        count--;
+        }
+        this.setContent(dataArr[count]);
+        return false;
+        }
+        },
+        {
+        val:"下一步",
+        dim:false,
+        onClick:function(){
+        if(count!=dataArr.length){
+        count++
+        }
+        this.setContent(dataArr[count]);
+        return false;
+        }
+        }
+        ]
+        });
+
+        $("runButton").click(function(){ ibox.setContent(dataArr[count=0]).showBox();});
+    </code>
+    <p class="buttons">
+        <button class="run-btn" id="demo3">运行&raquo;</button>
+    </p>
+</div>
+<div>
+    <div class="demo-title">定时关闭</div>
+    <code class="javascript">
+        var ibox=new araleX.Widget.iBox({
+        title: "自动关闭",
+        contentHtml: "3秒后定时关闭",
+        skin:"purple",
+        contentWidth:360,
+        contentHeight:60,
+        timeout:3000
+        });
+
+        $("runButton").click(function(){ ibox.showBox(); });
+    </code>
+    <p class="buttons">
+        <button class="run-btn" id="demo4">运行&raquo;</button>
+    </p>
+</div>
+
+
+<div>
+    <div class="demo-title">根据传入参照对象来定位</div>
+    <code class="javascript">
+        var ibox=new araleX.Widget.iBox({
+        title: "根据传入参照对象来定位",
+        contentHtml: "Arale iBox Widgets Is Based On arale.core-1.1.js",
+        contentWidth:360,
+        contentHeight:60,
+        follow:"demo8"<span>// ObjectID or Node Like $("demo8") </span>
+        });
+
+        $("runButton").click(function(){ ibox.showBox(); });
+    </code>
+    <p class="buttons">
+        <button class="run-btn" id="demo8">运行&raquo;</button>
+    </p>
+</div>
+
+<div>
+    <div class="demo-title">Unfixed</div>
+    <code class="javascript">
+        var ibox=new ibox({
+        title: "不跟随window窗口固定定位",
+        contentHtml: "Arale iBox Widgets Is Based On arale.core-1.1.js",
+        contentWidth:360,
+        contentHeight:60,
+        fixed:false <span>//当有follow对象时，fixed始终为false</span>
+        });
+
+        $("runButton").click(function(){ ibox.showBox(); });
+    </code>
+    <p class="buttons">
+        <button class="run-btn" id="demo13">运行&raquo;</button>
+    </p>
+</div>
+
+<div>
+    <div class="demo-title">支持拖拽</div>
+    <code class="javascript">
+        var ibox=new araleX.Widget.iBox({
+        title: "支持拖拽",
+        contentHtml: "鼠标点击Title拖拽",
+        skin:"alipay",
+        contentWidth:360,
+        contentHeight:60,
+        hasDrag:true
+        });
+
+        $("runButton").click(function(){ ibox.showBox(); });
+    </code>
+    <p class="buttons">
+        <button class="run-btn" id="demo5">运行&raquo;</button>
+    </p>
+</div>
+
+<div>
+    <div class="demo-title">支持遮罩层</div>
+    <code class="javascript">
+        var ibox=new araleX.Widget.iBox({
+        title: "支持遮罩层",
+        contentHtml: "支持遮罩层,兼容IE6下挡住Select标签",
+        skin:"douban",
+        contentWidth:360,
+        contentHeight:60,
+        hasOverlay:true,
+        overlayOpacity: 0.4,<span>//遮罩层背景透明度 （可选项）</span>
+        overlayColor: 'pink'<span>// 遮罩背景颜色 （可选项）</span>
+        });
+
+        $("runButton").click(function(){ ibox.showBox(); });
+    </code>
+    <p class="buttons">
+        <button class="run-btn" id="demo6">运行&raquo;</button>
+    </p>
+</div>
+
+<div>
+    <div class="demo-title">自定义布局</div>
+    <code class="javascript">
+        var ibox=new araleX.Widget.iBox({
+        contentHtml: "Arale iBox Widgets Is Based On arale.core-1.1.js",
+        contentWidth:360,
+        contentHeight:60,
+        hasTitle:false,<span>//默认 true （可选项）</span>
+        hasCloseBtn:true,<span>//默认 true （可选项）</span>
+        hasFootBtn: false,<span>//默认 true （可选项）</span>
+        hasBorder: true,<span>//默认 true （可选项）</span>
+        hasDrag:true
+        });
+
+        $("runButton").click(function(){ ibox.showBox(); });
+    </code>
+    <p class="buttons">
+        <button class="run-btn" id="demo7">运行&raquo;</button>
+    </p>
+</div>
+
+<div>
+    <div class="demo-title">加载DOM</div>
+    <code class="javascript">
+        var ibox=new araleX.Widget.iBox({
+        title: "加载DOM对象",
+        requestType:"dom",
+        requestTarget:"hiddenForm"<span>// ObjectID or Node Like $("hiddenForm") </span>
+        });
+        });
+
+        $("runButton").click(function(){ ibox.showBox(); });
+    </code>
+    <p class="buttons">
+        <button class="run-btn" id="demo9">运行&raquo;</button>
+    </p>
+</div>
+
+<div>
+    <div class="demo-title">加载IMG</div>
+    <code class="javascript">
+        var ibox=new araleX.Widget.iBox({
+        title: "加载IMG对象",
+        requestType:"img",
+        requestTarget:"http://pic2.nipic.com/20090416/460491_132709094_2.jpg",
+        contentWidth:500,
+        contentHeight:300
+        });
+
+        $("runButton").click(function(){ ibox.showBox(); });
+    </code>
+    <p class="buttons">
+        <button class="run-btn" id="demo10">运行&raquo;</button>
+    </p>
+</div>
+
+<div>
+    <div class="demo-title">加载IFRAME</div>
+    <code class="javascript">
+        var ibox=new araleX.Widget.iBox({
+        title: "加载IFRAME对象",
+        requestType:"iframe",
+        requestTarget:"http://www.iteye.com",
+        contentWidth:500,
+        contentHeight:300
+        });
+
+        $("runButton").click(function(){ ibox.showBox(); });
+    </code>
+    <p class="buttons">
+        <button class="run-btn" id="demo11">运行&raquo;</button>
+    </p>
+</div>
+
+<div>
+    <div class="demo-title">加载AJAX内容</div>
+    <code class="javascript">
+        var ibox=new araleX.Widget.iBox({
+        title: "加载AJAX",
+        requestType:"ajax",
+        requestTarget:"http://assets.dev.alipay.net/ar/demo/aralex.iBox-1.0-SNAPSHOT.html",
+        contentWidth:600,
+        contentHeight:300
+        });
+
+        $("runButton").click(function(){ ibox.showBox(); });
+    </code>
+    <p class="buttons">
+        <button class="run-btn" id="demo12">运行&raquo;</button>
+    </p>
+</div>
+
+<!--<div>-->
+<!--<div class="demo-title">自定义Animate效果</div>-->
+<!--<code class="javascript">-->
+<!--var ibox=new araleX.Widget.iBox({-->
+<!--title: "自定义Animate效果",-->
+<!--contentHtml: "Arale iBox Widgets Is Based On arale.core-1.1.js",-->
+<!--skin:"alipay",-->
+<!--contentWidth:360,-->
+<!--contentHeight:60,-->
+<!--showEffect: 'fade', <span>//  fade 或 slide</span>-->
+<!--showTime: 1000,      <span>//  默认 0 </span>-->
+<!--hideEffect: 'fade', <span>//  fade 或 slide</span>-->
+<!--hideTime: 1000      <span>//  默认 150 </span>-->
+<!--});-->
+
+<!--$("runButton").click(function(){ ibox.showBox(); });-->
+<!--</code>-->
+<!--<p class="buttons">-->
+<!--<button class="run-btn" id="demo14">运行&raquo;</button>-->
+<!--</p>-->
+<!--</div>-->
+
+
+<h2>支持浏览器</h2>
+<ul>
+    <li>Firefox 3.0+</li>
+    <li>Internet Explorer 6.0+</li>
+    <li>Chrome</li>
+    <li>Safari 2.0+</li>
+    <li>Opera 9.0+</li>
+</ul>
+
+<br>
+</div>
+
+</div>
+</div>
+
+</div>
+<div id="hiddenForm">
+    <div class="ui-form">
+        <form name="" method="post" action="#" id="">
+            <fieldset>
+                <legend>表单标题</legend>
+
+                <div class="ui-fm-item">
+                    <label for="" class="ui-fm-label"><span class="ui-fm-required">*</span>表单项文本：</label>
+                    <span class="ui-fm-text">表单项填写说明</span>
+                </div>
+                <div class="ui-fm-item">
+                    <label for="" class="ui-fm-label"><span class="ui-fm-required">*</span>表单项文本：</label>
+                    <input type="text" class="ui-input">
+                    <span class="ui-fm-other"></span>
+                    <div class="ui-fm-explain">表单项填写说明</div>
+                </div>
+
+                <div onmouseout="this.className='ui-fm-item';" onmouseover="this.className='ui-fm-item ui-fm-error';" class="ui-fm-item">
+                    <label for="" class="ui-fm-label"><span class="ui-fm-required">*</span>表单项文本：</label>
+                    <input type="text" class="ui-input">
+                    <span class="ui-fm-other"></span>
+                    <div class="ui-fm-explain">出错文案</div>
+                </div>
+
+                <div onmouseout="this.className='ui-fm-item';" onmouseover="this.className='ui-fm-item ui-fm-error';" class="ui-fm-item">
+                    <label for="" class="ui-fm-label"><span class="ui-fm-required">*</span>表单项文本：</label>
+                    <input type="text" class="ui-input">
+                    <span class="ui-fm-other"></span>
+                    <div class="ui-fm-explain">出错文案，含英语字母或数字，如 a,b,c,A,B,C,1234</div>
+                </div>
+
+                <div class="ui-fm-item">
+                    <label for="" class="ui-fm-label"><span class="ui-fm-required">*</span>表单项文本：</label>
+                    <input type="text" class="ui-input ui-fm-placeholder" value="我有默认文本哦">
+                    <span class="ui-fm-other"></span>
+                    <div class="ui-fm-explain">出错文案，含英语字母或数字，如 a,b,c,A,B,C,1234</div>
+                </div>
+
+                <div onmouseout="this.className='ui-fm-item ui-fm-success';" onmouseover="this.className='ui-fm-item ui-fm-loading';" class="ui-fm-item">
+                    <label for="" class="ui-fm-label"><span class="ui-fm-required">*</span>表单项文本：</label>
+                    <input type="text" class="ui-input">
+                    <span class="ui-fm-other"></span>
+                    <div class="ui-fm-explain">出错文案，含英语字母或数字，如 a,b,c,A,B,C,1234</div>
+                </div>
+
+                <div onmouseout="this.className='ui-fm-item ui-fm-loading';" onmouseover="this.className='ui-fm-item ui-fm-success';" class="ui-fm-item ui-fm-loading">
+                    <label for="" class="ui-fm-label"><span class="ui-fm-required">*</span>表单项文本：</label>
+                    <input type="text" class="ui-input">
+                    <span class="ui-fm-other"></span>
+                    <div class="ui-fm-explain">含加载中图标,ico-loading16。?</div>
+                </div>
+
+                <div onmouseout="this.className='ui-fm-item ui-fm-success';" onmouseover="this.className='ui-fm-item ui-fm-loading';" class="ui-fm-item ui-fm-success">
+                    <label for="" class="ui-fm-label"><span class="ui-fm-required">*</span>表单项文本：</label>
+                    <input type="text" class="ui-input">
+                    <span class="ui-fm-other"></span>
+                    <div class="ui-fm-explain">纯中文注释。</div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+</div>
+</body>
+<script charset="utf-8">
+    araleConfig = {
+        combo_host: 'assets.dev.alipay.net',
+        combo_path: '/ar/??'
+    }
+</script>
+<script charset="utf-8" src="http://assets.dev.alipay.net/ar/arale.core-1.1.js"></script>
+<script charset="utf-8" src="http://assets.dev.alipay.net/ar/aralex.iBox-1.0-SNAPSHOT-index.js"></script>
+<script type="text/javascript">
+    Loader.use('aralex.iBox', function() {
+        var ibox=araleX.Widget.iBox;
+
+        //创建一个iBox
+        var ibox1=new ibox({
+            cleanMod:true,
+            title: "无侵入式加载iBox",
+            contentHtml: "Arale iBox Widgets Is Based On arale.core-1.1.js",
+            skin:"alipay",
+            contentWidth:360,
+            contentHeight:60,
+            hasOverlay:true,
+            overlayOpacity: 0.4,
+            overlayColor: 'green'
+        });
+        $("demo1").click(function(){ibox1.showBox();});
+
+        //按钮定制化
+        var ibox2=new ibox({
+            title: "按钮定制化",
+            contentHtml: "Arale iBox Widgets Is Based On arale.core-1.1.js",
+            skin:"alipay",
+            closeVal:"关闭",
+            onClose:function(){
+                alert("Game Over!!!");
+            },
+            confirmVal:"换肤",
+            onConfirm:function(){
+                this.setSkin("douban").setTitle("豆瓣样式");
+                return false;
+            },
+            cancelVal:"还原",
+            onCancel:function(){
+                this.setSkin("alipay").setTitle("按钮定制化");
+                return false;
+            }
+        });
+        $("demo2").click(function(){ibox2.showBox();});
+
+        //自定义按钮
+        var dataArr=["步骤一","步骤二","步骤三","步骤四","步骤五","结束"];
+        var count=0;
+        var ibox3=new ibox({
+            title: "自定义按钮",
+            contentHtml: dataArr[count],
+            skin:"facebook",
+            contentWidth:360,
+            contentHeight:60,
+            buttonsAlign:"right",
+            buttons:[
+                {
+                    val:"上一步",
+                    dim:false,
+                    onClick:function(){
+                        if(count!=0){
+                            count--;
+                        }
+                        this.setContent(dataArr[count]);
+                        return false;
+                    }
+                },
+                {
+                    val:"下一步",
+                    dim:false,
+                    onClick:function(){
+                        if(count!=dataArr.length){
+                            count++
+                        }
+                        this.setContent(dataArr[count]);
+                        return false;
+                    }
+                }
+            ]
+        });
+        $("demo3").click(function(){ibox3.showBox().setContent(dataArr[count=0]);});
+
+        //定时关闭
+        var ibox4=new ibox({
+            title: "自动关闭",
+            contentHtml: "3秒后定时关闭",
+            skin:"purple",
+            contentWidth:360,
+            contentHeight:60,
+            timeout:3000
+        });
+        $("demo4").click(function(){ibox4.showBox();});
+
+        //根据传入参照对象来定位
+        var ibox8=new ibox({
+            title: "根据传入参照对象来定位",
+            contentHtml: "Arale iBox Widgets Is Based On arale.core-1.1.js",
+            contentWidth:360,
+            contentHeight:60,
+            follow:"demo8"// ObjectID or Node Like $("demo8")
+        });
+        $("demo8").click(function(){ibox8.showBox();});
+
+        //Unfixed
+        var ibox13=new ibox({
+            title: "不跟随window固定窗口",
+            contentHtml: "Arale iBox Widgets Is Based On arale.core-1.1.js",
+            contentWidth:360,
+            contentHeight:60,
+            fixed:false//当有follow对象时，fixed始终为false
+        });
+        $("demo13").click(function(){ibox13.showBox();});
+
+        //支持拖拽
+        var ibox5=new ibox({
+            title: "支持拖拽",
+            contentHtml: "鼠标点击Title拖拽",
+            skin:"alipay",
+            contentWidth:360,
+            contentHeight:60,
+            hasDrag:true
+        });
+        $("demo5").click(function(){ibox5.showBox();});
+
+        //支持遮罩层
+        var ibox6=new ibox({
+            title: "支持遮罩层",
+            contentHtml: "支持遮罩层,兼容IE6下挡住Select标签",
+            skin:"douban",
+            contentWidth:360,
+            contentHeight:60,
+            hasOverlay:true,
+            overlayOpacity: 0.4,//遮罩层背景透明度 （可选项）
+            overlayColor: 'pink'// 遮罩背景颜色 （可选项）
+        });
+        $("demo6").click(function(){ibox6.showBox();});
+
+        //自定义布局
+        var ibox7=new ibox({
+            contentHtml: "Arale iBox Widgets Is Based On arale.core-1.1.js",
+            contentWidth:360,
+            contentHeight:60,
+            hasTitle:false,//默认 true （可选项）
+            hasCloseBtn:true,//默认 true （可选项）
+            hasFootBtn: false,//默认 true （可选项）
+            hasBorder: true,//默认 true （可选项）
+            hasDrag:true
+        });
+        $("demo7").click(function(){ibox7.showBox();});
+
+        //加载Dom
+        var ibox9=new ibox({
+            title: "加载DOM对象",
+            requestType:"dom",
+            requestTarget:"hiddenForm"// ObjectID or Node Like $("hiddenForm")
+        });
+        $("demo9").click(function(){ibox9.showBox();});
+
+        //加载IMG
+        var ibox10=new ibox({
+            title: "加载IMG对象",
+            requestType:"img",
+            requestTarget:"http://pic2.nipic.com/20090416/460491_132709094_2.jpg",
+            contentWidth:500,
+            contentHeight:300
+        });
+        $("demo10").click(function(){ibox10.showBox();});
+
+        //加载IFRAME
+        var ibox11=new ibox({
+            title: "加载IFRAME对象",
+            requestType:"iframe",
+            requestTarget:"http://www.iteye.com",
+            contentWidth:500,
+            contentHeight:300
+        });
+        $("demo11").click(function(){ibox11.showBox();});
+
+        //加载AJAX
+        var ibox12=new ibox({
+            title: "加载AJAX",
+            requestType:"ajax",
+            requestTarget:"http://assets.dev.alipay.net/ar/demo/aralex.iBox-1.0-SNAPSHOT.html",
+            contentWidth:600,
+            contentHeight:300
+        });
+        $("demo12").click(function(){ibox12.showBox();});
+
+        //自定义Animate效果
+//           var ibox14=new ibox({
+//               title: "自定义Animate效果",
+//               contentHtml: "Arale iBox Widgets Is Based On arale.core-1.1.js",
+//               skin:"alipay",
+//               contentWidth:360,
+//               contentHeight:60,
+//               showEffect: 'fade', //  fade 或 slide
+//               showTime: 1000,      //  默认 0
+//               hideEffect: 'fade', //  fade 或 slide
+//               hideTime: 1000      //  默认 150
+//           });
+//           $("demo14").click(function(){ibox14.showBox();});
+
+    });
+</script>
+</html>
